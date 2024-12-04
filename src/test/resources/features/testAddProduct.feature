@@ -1,5 +1,5 @@
 # language: ru
-
+# src/test/resources/features/testAddProduct.feature
 Функционал: Добавление нового товара
 
   Сценарий: Добавление нового товара

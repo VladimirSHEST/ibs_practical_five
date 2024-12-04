@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c93c5d64-7393-4bf9-b45b-96653ed3c4f1" name="Changes" comment="Добавил тесты">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/ibs/runner/TestRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/ibs/task_3/steps/TestAddProductSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/test.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="c93c5d64-7393-4bf9-b45b-96653ed3c4f1" name="Changes" comment="task_3 добавил cucumber">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/ibs/task_4/runner/TestRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/ibs/task_4/steps/TestAddExistProductSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/testAddProductExist.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/ibs/task_3/tests_no_page_object/Sandbox.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/ibs/task_4/tests_no_page_object/TestSandBox_2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ibs/runner/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ibs/task_3/runner/TestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ibs/task_3/tests/TestClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ibs/task_4/tests/SandBoxTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/test.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/testAddProduct.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,10 +62,16 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Cucumber Java.Feature: test.executor": "Run",
+    "Cucumber Java.Feature: testAddProductExist.executor": "Run",
+    "Cucumber Java.Scenario: Добавление нового товара уже существующего в списке товаров.executor": "Run",
+    "Cucumber Java.Scenario: Добавление нового товара уже существующего.executor": "Run",
+    "JUnit.AddProductTestRunner.executor": "Run",
     "JUnit.SandBoxTest.AddingExistingProduct.executor": "Run",
     "JUnit.SandBoxTest.executor": "Run",
     "JUnit.Sandbox.executor": "Run",
     "JUnit.TestClass.executor": "Run",
+    "JUnit.TestRunner (1).executor": "Run",
+    "JUnit.TestRunner (2).executor": "Run",
     "JUnit.TestRunner.executor": "Run",
     "JUnit.TestSandBox_2 (1).executor": "Run",
     "JUnit.TestSandBox_2 (2).executor": "Run",
@@ -77,7 +85,7 @@
     "git-widget-placeholder": "with__cucumber",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Vladimir/IdeaProjects/Cucumber_Pendrak",
+    "last_opened_file_path": "C:/Users/Vladimir/IdeaProjects/ibs_practical_five/src/test/java/com/ibs/task_4/steps",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
@@ -86,6 +94,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Vladimir\IdeaProjects\ibs_practical_five\src\test\java\com\ibs\task_4" />
       <recent name="C:\Users\Vladimir\IdeaProjects\ibs_practical_five\src\test\java\com\ibs\task_3" />
       <recent name="C:\Users\Vladimir\IdeaProjects\ibs_practical_five\src\test\java" />
       <recent name="C:\Users\Vladimir\IdeaProjects\ibs_practical_five\src\test\resources" />
@@ -97,15 +106,15 @@
       <command value="mvn test" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestRunner">
-    <configuration name="Feature: test" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Cucumber Java.Feature: testAddProductExist">
+    <configuration name="Feature: testAddProductExist" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/test.feature" />
-      <option name="GLUE" value="com.ibs.task_3.steps" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/testAddProductExist.feature" />
+      <option name="GLUE" value="com.ibs.task_4.steps com.ibs.task_3.steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="ibs_practical_five" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: test" />
+      <option name="SUGGESTED_NAME" value="Feature: testAddProductExist" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -117,46 +126,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SandBoxTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Добавление нового товара уже существующего" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/testAddProductExist.feature" />
+      <option name="GLUE" value="com.ibs.task_3.steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="ibs_practical_five" />
+      <option name="NAME_FILTER" value="^Добавление нового товара уже существующего$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Добавление нового товара уже существующего$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Добавление нового товара уже существующего" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ibs.task_4.tests.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ibs.task_4.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.ibs.task_4.tests.SandBoxTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestRunner (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ibs_practical_five" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ibs.task_3.runner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ibs.task_3.runner" />
+      <option name="MAIN_CLASS_NAME" value="com.ibs.task_3.runner.TestRunner" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Sandbox" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestRunner (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ibs_practical_five" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ibs.task_3.tests_no_page_object.*" />
+          <option name="PATTERN" value="com.ibs.task_4.runner.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ibs.task_3.tests_no_page_object" />
-      <option name="MAIN_CLASS_NAME" value="com.ibs.task_3.tests_no_page_object.Sandbox" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestClass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ibs_practical_five" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ibs.task_3.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ibs.task_3.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.ibs.task_3.tests.TestClass" />
+      <option name="PACKAGE_NAME" value="com.ibs.task_4.runner" />
+      <option name="MAIN_CLASS_NAME" value="com.ibs.task_4.runner.TestRunner" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -179,11 +193,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestRunner" />
-        <item itemvalue="JUnit.TestClass" />
-        <item itemvalue="Cucumber Java.Feature: test" />
-        <item itemvalue="JUnit.SandBoxTest" />
-        <item itemvalue="JUnit.Sandbox" />
+        <item itemvalue="Cucumber Java.Feature: testAddProductExist" />
+        <item itemvalue="JUnit.TestRunner (2)" />
+        <item itemvalue="JUnit.TestRunner (1)" />
+        <item itemvalue="JUnit.AddProductTestRunner" />
+        <item itemvalue="Cucumber Java.Scenario: Добавление нового товара уже существующего" />
       </list>
     </recent_temporary>
   </component>
@@ -204,12 +218,21 @@
       <option name="project" value="LOCAL" />
       <updated>1733319896173</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="task_3 добавил cucumber">
+      <option name="closed" value="true" />
+      <created>1733335943555</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1733335943555</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Добавил тесты" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил тесты" />
+    <MESSAGE value="task_3 добавил cucumber" />
+    <option name="LAST_COMMIT_MESSAGE" value="task_3 добавил cucumber" />
   </component>
 </project>
