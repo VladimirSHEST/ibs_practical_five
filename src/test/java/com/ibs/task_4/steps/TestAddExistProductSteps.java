@@ -53,7 +53,7 @@ public class  TestAddExistProductSteps extends BaseTest {
         addProductModal.setProductName(productName);
     }
 
-    @И("^выбираем тип товара \"([^\"]*)\"$")
+    @И("^выбирали тип товара \"([^\"]*)\"$")
     public void selectTypeProduct(String type) {
         addProductModal.selectTypeFruit();
     }
